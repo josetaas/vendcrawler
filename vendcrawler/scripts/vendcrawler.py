@@ -83,4 +83,4 @@ class VendCrawler(object):
 
                 values.append(value)
 
-            self.vcdb.insert(table, columns, values)
+        self.vcdb.insert(table, columns, values)
