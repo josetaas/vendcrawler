@@ -11,7 +11,8 @@ setup(name='vendcrawler',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'click'
+          'click',
+          'pymysql'
       ],
       extras_require={
           'test': ['pytest'],

@@ -7,6 +7,9 @@ from vendcrawler.scripts.vendcrawler import VendCrawler
 
 
 @click.command('vendcrawler')
+@click.argument('user')
+@click.argument('password')
+@click.argument('database')
 @click.argument('interval')
-def cli(interval):
-    VendCrawler().run(interval)
+def cli(user, password, database, interval):
+    VendCrawler(user, password, database).run(interval)
