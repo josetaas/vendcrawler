@@ -12,7 +12,7 @@ class TestVendPageParserMethods(unittest.TestCase):
         self.assertEqual(vendpageparser.items[0]['id'], '2221')
         self.assertEqual(vendpageparser.items[1]['name'], 'Buckler [1]')
         self.assertEqual(vendpageparser.items[3]['amount'], '12')
-        self.assertEqual(vendpageparser.items[4]['vendor'], '186612')
+        self.assertEqual(vendpageparser.items[4]['vendor_id'], '186612')
 
 if __name__ == '__main__':
     unittest.main()
