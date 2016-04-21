@@ -76,7 +76,7 @@ class VendCrawler(object):
                          item['name'],
                          int(item['vendor_id']),
                          item['shop'], 
-                         int(item['amount']),
+                         int(item['amount'].replace(',', '')),
                          int(item['price'].replace(',', '')),
                          item['map'],
                          item['datetime']]
