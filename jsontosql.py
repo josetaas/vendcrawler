@@ -9,8 +9,8 @@ from vendcrawler.scripts.vendcrawlerdb import VendCrawlerDB
 class JSONToSQL(object):
 
     def __init__(self, json, user, password, database):
-        self.data = loads(json.read())
-        self.db = VendCrawlerDB(user, password, database)
+        data = loads(json.read())
+        db = VendCrawlerDB(user, password, database)
 
         
         table = 'items'
@@ -30,7 +30,7 @@ class JSONToSQL(object):
 
                 values.append(value)
 
-        self.vcdb.insert(table, columns, values)
+        self.db.insert(table, columns, values)
 
 
 @click.command()
