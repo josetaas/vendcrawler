@@ -25,7 +25,7 @@ class VendCrawler(object):
             with urllib.request.urlopen(req) as response:
                 page_count = self.get_page_count(response.read().decode('utf-8'))
         
-            links = self.get_links(int(2))
+            links = self.get_links(int(page_count))
             pool = ThreadPool(4)
             results = pool.map(self.parse_link, links)
             pool.close()
